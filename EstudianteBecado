@@ -1,0 +1,19 @@
+public class EstudianteBecado extends Estudiante {
+    private double porcentajeBeca;
+
+    public EstudianteBecado(String nombre, int edad, String matricula, double porcentajeBeca) {
+        super(nombre, edad, matricula);
+        this.porcentajeBeca = porcentajeBeca;
+    }
+
+    public double calcularCuota(double cuotaBase) {
+        double descuento = cuotaBase * (porcentajeBeca / 100);
+        return cuotaBase - descuento;
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Beca: " + porcentajeBeca + "%");
+    }
+}
