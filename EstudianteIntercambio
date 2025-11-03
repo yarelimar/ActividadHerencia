@@ -1,0 +1,21 @@
+public class EstudianteIntercambio extends Estudiante {
+    private String universidadExtranjera;
+    private int duracionMeses;
+
+    public EstudianteIntercambio(String nombre, int edad, String matricula, String universidadExtranjera, int duracionMeses) {
+        super(nombre, edad, matricula);
+        this.universidadExtranjera = universidadExtranjera;
+        this.duracionMeses = duracionMeses;
+    }
+
+    public void mostrarPeriodoIntercambio() {
+        System.out.println(getNombre() + " estará de intercambio en " + universidadExtranjera + " por " + duracionMeses + " meses.");
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Universidad: " + universidadExtranjera);
+        System.out.println("Duración: " + duracionMeses + " meses");
+    }
+}
