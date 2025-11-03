@@ -1,0 +1,22 @@
+public class EstudianteRegular extends Estudiante {
+    private String carrera;
+    private int creditos;
+
+    public EstudianteRegular(String nombre, int edad, String matricula, String carrera, int creditos) {
+        super(nombre, edad, matricula);
+        this.carrera = carrera;
+        this.creditos = creditos;
+    }
+
+    public void inscribirMateria() {
+        creditos += 8;
+        System.out.println(getNombre() + " se inscribió en materias. Créditos ahora: " + creditos);
+    }
+
+    @Override
+    public void mostrarInformacion() {
+        super.mostrarInformacion();
+        System.out.println("Carrera: " + carrera);
+        System.out.println("Créditos: " + creditos);
+    }
+}
